@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+  </head>
+  <body>
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5 w-50">
+          <styled-heading>
+            <h1 class="mb-5 text-center">Tambah Story</h1>
+          </styled-heading>
+
+          <form id="addStoryForm" class="bg-white p-4 rounded shadow">
+            <div class="mb-4">
+              <label
+                for="validationCustomDescription"
+                class="form-label fw-semibold fs-5"
+                >Deskripsi</label
+              >
+              <textarea-with-validation
+                inputId="validationCustomDescription"
+                invalidFeedbackMessage="Wajib diisi"
+                required
+                rows="5"
+              ></textarea-with-validation>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="validationCustomEvidence"
+                class="form-label fw-semibold fs-5"
+                >Foto</label
+              >
+              <input-image-with-preview
+                inputId="validationCustomEvidence"
+                invalidFeedbackMessage="Wajib diisi"
+                required
+              ></input-image-with-preview>
+            </div>
+
+            <styled-button>
+              <button type="submit">Submit</button>
+            </styled-button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

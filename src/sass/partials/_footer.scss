@@ -1,0 +1,6 @@
+@use "../abstracts/variables" as var;
+
+footer {
+  background: var.$secondary-backround-color;
+  color: white;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+  </head>
+  <body>
+    <header>
+      <nav-app brandName="<%= brandName %>"></nav-app>
+    </header>
+
+    <main>
+      <div class="main-content">
+        <div class="container py-5 w-50">
+          <styled-heading>
+            <h1 class="mb-5 text-center">Company Profile</h1>
+          </styled-heading>
+
+          <company-profile></company-profile>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

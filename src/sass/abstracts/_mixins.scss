@@ -1,0 +1,11 @@
+@mixin align-centering-using-flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin sticky-middle-left {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.offcanvas-btn {
+  @include mix.align-centering-using-flex;
+  @include mix.sticky-middle-left;
+  background: var.$secondary-backround-color;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  z-index: 1000;
+  overflow: hidden;
+
+  span {
+    &:first-of-type {
+      font-size: 1.4rem;
+      margin-left: -68px;
+      transition: margin-left 0.3s ease;
+    }
+
+    &:last-of-type {
+      font-size: 2rem;
+      margin-left: 10px;
+    }
+  }
+
+  &:hover {
+    span:first-of-type {
+      margin-left: 10px;
+    }
+  }
+}
+
+.card-btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #343a40;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #343a40;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: var.$secondary-backround-color;
+    border-color: #343a40;
+  }
+}
