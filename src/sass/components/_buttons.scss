@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+@use "sass:map";
 
 .offcanvas-btn {
   @include mix.align-centering-using-flex;
@@ -7,7 +8,7 @@
   background: var.$secondary-backround-color;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 6px 12px 12px 12px;
   border-radius: 0 5px 5px 0;
   z-index: 1000;
   overflow: hidden;
@@ -52,5 +53,31 @@
     color: #fff;
     background: var.$secondary-backround-color;
     border-color: #343a40;
+  }
+}
+
+@media screen and (max-width: map.get(var.$breakpoints, "sm")) {
+  .offcanvas-btn {
+    @include mix.absolute-left-top;
+    padding: 40px 12px 0px 12px;
+
+    span {
+      &:first-of-type {
+        font-size: 1.4rem;
+        margin-left: 0px;
+        transition: margin-left 0.3s ease;
+      }
+
+      &:last-of-type {
+        font-size: 2rem;
+        margin-left: 0px;
+      }
+    }
+
+    &:hover {
+      span:first-of-type {
+        margin-left: 0px;
+      }
+    }
   }
 }

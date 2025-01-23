@@ -44,7 +44,7 @@ const Dashboard = {
 
   _templateCardItem(card) {
     return `
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-4 col-xl-3">
         <div class="card">
           <img
             src="${card.photoUrl}"
