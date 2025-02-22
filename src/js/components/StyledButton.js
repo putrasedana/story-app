@@ -13,7 +13,9 @@ class StyledButton extends LitElement {
       width: 50%;
       margin: 20px auto 0;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition:
+        transform 0.2s,
+        box-shadow 0.2s;
       font-size: 1.2rem;
     }
 

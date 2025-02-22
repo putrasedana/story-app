@@ -9,3 +9,8 @@ import "./StyledButton";
 import "./CompanyProfile";
 import "./form/TextareaWithValidation";
 import "./form/InputImageWithPreview";
+import "./form/InputWithValidation";
+import "./LoadingIndicator";
+import "./AlertIndicator";
+import "./LocalePicker";
+import "./UserProfile";

@@ -10,15 +10,28 @@ class NavLinks extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <ul class="navbar-nav d-flex align-items-center gap-3">
-        <nav-link content="${msg(`Halaman Utama`)}" to="/"></nav-link>
-        <nav-link content="${msg(`Tambah Story`)}" to="/add.html"></nav-link>
+      <ul class="navbar-nav d-flex gap-3 list-group">
         <nav-link
-          content="${msg(`Profil Perusahaan`)}"
-          to="/company-profile.html"
+          content="${msg(`Homepage`)}"
+          to="/"
+          icon="bi bi-house-door"
         ></nav-link>
-        <nav-link content="${msg(`Masuk`)}" to="#"></nav-link>
-        <nav-link-auth class="d-none" id="userLoggedMenu"></nav-link-auth>
+        <nav-link
+          content="${msg(`Add Story`)}"
+          to="/add.html"
+          icon="bi bi-pencil"
+        ></nav-link>
+        <nav-link
+          content="${msg(`User Profile `)}"
+          to="/user-profile.html"
+          icon="bi bi-person"
+        ></nav-link>
+        <nav-link
+          content="${msg(`Company Profile`)}"
+          to="/company-profile.html"
+          icon="bi bi-buildings"
+        ></nav-link>
+        <nav-link-auth id="userLoggedMenu"></nav-link-auth>
       </ul>
     `;
   }

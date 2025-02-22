@@ -1,6 +1,12 @@
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 import { LitElement, html, css } from "lit";
 
 class CompanyProfile extends LitElement {
+  constructor() {
+    super();
+    updateWhenLocaleChanges(this);
+  }
+
   static styles = css`
     :host {
       display: block;
@@ -50,23 +56,27 @@ class CompanyProfile extends LitElement {
   render() {
     return html`
       <div>
-        <h1>PT. Nice Story</h1>
+        <h1>${msg("PT. Nice Story")}</h1>
         <p>
-          PT. Nice Story adalah perusahaan yang berfokus pada pengembangan
-          teknologi inovatif untuk membantu orang-orang berbagi cerita mereka
-          dengan cara yang kreatif dan inspiratif.
+          ${msg(
+            "PT. Nice Story is a company focused on developing innovative technology to help people share their stories in creative and inspiring ways.",
+          )}
         </p>
         <p>
-          Kami percaya bahwa setiap cerita memiliki kekuatan untuk menginspirasi
-          dan mengubah dunia, dan misi kami adalah menyediakan platform terbaik
-          untuk mewujudkan hal tersebut.
+          ${msg(
+            "We believe that every story has the power to inspire and change the world, and our mission is to provide the best platform to make that happen.",
+          )}
         </p>
 
         <div class="contact">
-          <h2>Kontak Kami</h2>
-          <p><strong>Alamat:</strong> Jl. Cerita Indah No. 10, Jakarta</p>
-          <p><strong>Email:</strong> contact@nicestory.com</p>
-          <p><strong>Telepon:</strong> +62 812 3456 7890</p>
+          <h2>${msg("Contact Us")}</h2>
+          <p>
+            <strong>${msg("Address:")}</strong> ${msg(
+              "Jl. Cerita Indah No. 10, Jakarta",
+            )}
+          </p>
+          <p><strong>${msg("Email:")}</strong> contact@nicestory.com</p>
+          <p><strong>${msg("Phone:")}</strong> +62 812 3456 7890</p>
         </div>
       </div>
     `;

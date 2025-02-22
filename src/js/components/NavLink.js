@@ -5,6 +5,7 @@ class NavLink extends LitWithoutShadowDom {
   static properties = {
     content: { type: String, reflect: true },
     to: { type: String, reflect: true },
+    icon: { type: String, reflect: true },
   };
 
   constructor() {
@@ -15,7 +16,7 @@ class NavLink extends LitWithoutShadowDom {
   _checkAvailabilityProperty() {
     if (!this.hasAttribute("to")) {
       throw new Error(
-        `Atribut "to" harus diterapkan pada elemen ${this.localName}`
+        `Atribut "to" harus diterapkan pada elemen ${this.localName}`,
       );
     }
   }
@@ -23,7 +24,9 @@ class NavLink extends LitWithoutShadowDom {
   render() {
     return html`
       <li class="nav-item">
-        <a class="nav-link fw-semibold" href="${this.to}">${this.content}</a>
+        <a class="nav-link fw-semibold fs-5" href="${this.to}"
+          ><i class="${this.icon} ms-3 me-2"></i> ${this.content}</a
+        >
       </li>
     `;
   }

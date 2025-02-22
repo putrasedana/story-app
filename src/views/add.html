@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,29 +16,29 @@
       <div class="add-story">
         <div class="container py-5">
           <styled-heading>
-            <h1 class="mb-5 text-center">Tambah Story</h1>
+            <h1 class="mb-5 text-center">Add Story</h1>
           </styled-heading>
 
-          <form id="addStoryForm" class="bg-white p-4 rounded shadow">
+          <form id="addStoryForm" class="bg-white p-4 rounded shadow d-flex flex-column">
             <div class="mb-4">
               <label
                 for="validationCustomDescription"
                 class="form-label fw-semibold fs-5"
-                >Deskripsi</label
+                >Description</label
               >
               <textarea-with-validation
                 inputId="validationCustomDescription"
                 invalidFeedbackMessage="Wajib diisi"
                 required
-                rows="5"
+                rows="8"
               ></textarea-with-validation>
             </div>
 
-            <div class="mb-4">
+            <div class="mb-5">
               <label
                 for="validationCustomImage"
                 class="form-label fw-semibold fs-5"
-                >Foto</label
+                >Photo</label
               >
               <input-image-with-preview
                 inputId="validationCustomImage"
@@ -47,12 +47,14 @@
               ></input-image-with-preview>
             </div>
 
-            <styled-button>
-              <button type="submit">Submit</button>
-            </styled-button>
+              <button class="custom-btn w-50 mx-auto" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </main>
+
+    
+        <footer-app></footer-app>
+    </footer>
   </body>
 </html>

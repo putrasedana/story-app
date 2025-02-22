@@ -1,34 +1,27 @@
-import { formattedDate, truncateText } from "../../utils";
+import Stories from "../network/stories";
+import { formattedDate, truncateText } from "../utils/index";
+import CheckUserAuth from "./check-user-auth";
 
 const Dashboard = {
   async init() {
+    CheckUserAuth.checkLoginState();
     await this._initialData();
   },
 
   async _initialData() {
     try {
-      const fetchRecords = await fetch(
-        "https://raw.githubusercontent.com/dicodingacademy/a565-webtools-labs/099-shared-files/proyek-awal/DATA.json"
-      );
-
-      if (!fetchRecords.ok) {
-        throw new Error(`HTTP error! status: ${fetchRecords.status}`);
-      }
-
-      const responseRecords = await fetchRecords.json();
-      this._listStory = responseRecords.listStory;
-
-      this._populateCardList(this._listStory);
+      const response = await Stories.getAll();
+      const listStory = response.listStory;
+      this._populateCardList(listStory);
     } catch (error) {
-      alert(`Failed to fetch data: ${error.message}`);
-      console.error("Error fetching data:", error);
+      console.error(error);
     }
   },
 
   _populateCardList(listStory = null) {
     if (!Array.isArray(listStory)) {
       throw new Error(
-        `Parameter listStory should be an array. The value is ${listStory}`
+        `Parameter listStory should be an array. The value is ${listStory}`,
       );
     }
     const cardList = document.querySelector("#cardList");
@@ -44,22 +37,23 @@ const Dashboard = {
 
   _templateCardItem(card) {
     return `
-      <div class="col-md-6 col-lg-4 col-xl-3">
-        <div class="card">
+      <div class="col-md-6 col-lg-4 col-xl-4">
+        <div class="card h-100 shadow-sm border-5">
           <img
             src="${card.photoUrl}"
-            class="card-img-top"
+            class="card-img-top w-100 img-fluid"
             alt="Story Image"
+            style="height: 200px; object-fit: cover;"
           />
-          <div class="card-body">
-            <h5 class="card-title">${card.name}</h5>
-            <p class="text-muted small">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title mb-1">${card.name}</h5>
+            <p class="text-muted small mb-1">
               ${formattedDate(card.createdAt)}
             </p>
             <p class="card-text">
-              ${truncateText(card.description, 120)}
+              ${truncateText(card.description, 150)}
             </p>
-            <a href="#" class="card-btn">Read More</a>
+            <a href="/detail-story.html?id=${card.id}" class="custom-btn mt-auto">Read More</a>
           </div>
         </div>
       </div>

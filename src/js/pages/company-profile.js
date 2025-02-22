@@ -1,6 +1,8 @@
+import CheckUserAuth from "./check-user-auth";
+
 const CompanyProfile = {
   async init() {
-    return;
+    CheckUserAuth.checkLoginState();
   },
 };
 

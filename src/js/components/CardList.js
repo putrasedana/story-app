@@ -9,7 +9,7 @@ class CardList extends LitWithoutShadowDom {
   render() {
     return html`
       <div class="container">
-        <div id="cardList" class="row g-3"></div>
+        <div id="cardList" class="row g-3 align-items-stretch"></div>
       </div>
     `;
   }

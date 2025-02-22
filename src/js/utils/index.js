@@ -15,4 +15,11 @@ function truncateText(text, maxLength) {
   return text;
 }
 
-export { formattedDate, truncateText };
+const toggleLoading = (show) => {
+  const loadingIndicator = document.getElementById("loading");
+  if (loadingIndicator) {
+    loadingIndicator.style.display = show ? "block" : "none";
+  }
+};
+
+export { formattedDate, truncateText, toggleLoading };

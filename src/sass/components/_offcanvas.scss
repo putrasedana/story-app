@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as var;
+
+.custom-offcanvas {
+  background: var.$secondary-backround-color;
+  color: white;
+}
+
+.nav-item {
+  background-color: transparent;
+}
+
+.nav-item a {
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.8rem;
+}
+
+.nav-item a:hover {
+  color: #000;
+}

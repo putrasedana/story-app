@@ -6,4 +6,11 @@ $breakpoints: (
   "xxl": 1400px,
 );
 
+$main-background-color: linear-gradient(
+  to right,
+  #ff6a00,
+  #ee0979,
+  #2b5876,
+  #4e4376
+);
 $secondary-backround-color: linear-gradient(to right, #2b5876, #4e4376);

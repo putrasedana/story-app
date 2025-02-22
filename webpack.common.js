@@ -16,7 +16,6 @@ module.exports = {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true,
   },
   module: {
     rules: [
@@ -63,6 +62,32 @@ module.exports = {
       template: path.resolve(__dirname, "src/views/company-profile.html"),
       ...htmlWebpackPluginConfig,
     }),
+    new HtmlWebpackPlugin({
+      title: "User Profile",
+      filename: "user-profile.html",
+      template: path.resolve(__dirname, "src/views/user-profile.html"),
+      ...htmlWebpackPluginConfig,
+    }),
+    new HtmlWebpackPlugin({
+      title: "Detail Story",
+      filename: "detail-story.html",
+      template: path.resolve(__dirname, "src/views/detail-story.html"),
+      ...htmlWebpackPluginConfig,
+    }),
+
+    // Auth pages
+    new HtmlWebpackPlugin({
+      title: "Login",
+      filename: "login.html",
+      template: path.resolve(__dirname, "src/views/login.html"),
+      ...htmlWebpackPluginConfig,
+    }),
+    new HtmlWebpackPlugin({
+      title: "Register",
+      filename: "register.html",
+      template: path.resolve(__dirname, "src/views/register.html"),
+      ...htmlWebpackPluginConfig,
+    }),
 
     new CopyWebpackPlugin({
       patterns: [
@@ -72,6 +97,7 @@ module.exports = {
         },
       ],
     }),
+
     new CleanWebpackPlugin(),
   ],
 };

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="es" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s6d8c02aee480af7a">
+  <source>Menu</source>
+  <target>Menú</target>
+</trans-unit>
+<trans-unit id="s673303a6c8042bb5">
+  <source>Homepage</source>
+  <target>Página principal</target>
+</trans-unit>
+<trans-unit id="s1f30f2eaf1e38fb9">
+  <source>Add Story</source>
+  <target>Agregar historia</target>
+</trans-unit>
+<trans-unit id="s48a3375b01c77fc1">
+  <source>User Profile </source>
+  <target>Perfil de usuario</target>
+</trans-unit>
+<trans-unit id="s3835d37db3d606c1">
+  <source>Company Profile</source>
+  <target>Perfil de la empresa</target>
+</trans-unit>
+<trans-unit id="s67749057edb2586b">
+  <source>Logout</source>
+  <target>Cerrar sesión</target>
+</trans-unit>
+<trans-unit id="se93cb0c892820b0a">
+  <source>About Us</source>
+  <target>Sobre nosotros</target>
+</trans-unit>
+<trans-unit id="sb68431ba09bcb01c">
+  <source>PT. Nice Story is a fictional company engaged in technology and digital innovation.</source>
+  <target>PT. Nice Story es una empresa ficticia dedicada a la tecnología y la innovación digital.</target>
+</trans-unit>
+<trans-unit id="s38474b473afd5815">
+  <source>Quick Links</source>
+  <target>Enlaces rápidos</target>
+</trans-unit>
+<trans-unit id="s6abb1cd87fe0114e">
+  <source>Home</source>
+  <target>Inicio</target>
+</trans-unit>
+<trans-unit id="sf55d634dcc743595">
+  <source>Services</source>
+  <target>Servicios</target>
+</trans-unit>
+<trans-unit id="sec9bb1a7c11e8e91">
+  <source>Blog</source>
+  <target>Blog</target>
+</trans-unit>
+<trans-unit id="s87bae2710b2492c3">
+  <source>Contact</source>
+  <target>Contacto</target>
+</trans-unit>
+<trans-unit id="se3df03f911d98cd7">
+  <source>Jl. Example No. 123, Jakarta City</source>
+  <target>Jl. Ejemplo No. 123, Ciudad de Yakarta</target>
+</trans-unit>
+<trans-unit id="scb056ed6dbbd6244">
+  <source>Follow Us</source>
+  <target>Síguenos</target>
+</trans-unit>
+<trans-unit id="s30c26ef5c375aab1">
+  <source>All rights reserved.</source>
+  <target>Todos los derechos reservados.</target>
+</trans-unit>
+<trans-unit id="s32af6be020d87b4f">
+  <source>PT. Nice Story</source>
+  <target>PT. Nice Story</target>
+</trans-unit>
+<trans-unit id="s7778b28ad12eb326">
+  <source>PT. Nice Story is a company focused on developing innovative technology to help people share their stories in creative and inspiring ways.</source>
+  <target>PT. Nice Story es una empresa enfocada en desarrollar tecnología innovadora para ayudar a las personas a compartir sus historias de manera creativa e inspiradora.</target>
+</trans-unit>
+<trans-unit id="s3b35f66e621bc1ae">
+  <source>We believe that every story has the power to inspire and change the world, and our mission is to provide the best platform to make that happen.</source>
+  <target>Creemos que cada historia tiene el poder de inspirar y cambiar el mundo, y nuestra misión es proporcionar la mejor plataforma para hacerlo posible.</target>
+</trans-unit>
+<trans-unit id="sd1cae0dcd2945c35">
+  <source>Contact Us</source>
+  <target>Contáctanos</target>
+</trans-unit>
+<trans-unit id="s223022508c063aab">
+  <source>Address:</source>
+  <target>Dirección:</target>
+</trans-unit>
+<trans-unit id="sfec56a8ce1d1ba69">
+  <source>Jl. Cerita Indah No. 10, Jakarta</source>
+  <target>Jl. Cerita Indah No. 10, Yakarta</target>
+</trans-unit>
+<trans-unit id="s8430c71b7abe6807">
+  <source>Email:</source>
+  <target>Correo electrónico:</target>
+</trans-unit>
+<trans-unit id="s5f03f35ef88bfd4f">
+  <source>Phone:</source>
+  <target>Teléfono:</target>
+</trans-unit>
+<trans-unit id="s49730f3d5751a433">
+  <source>Loading...</source>
+  <target>Cargando...</target>
+</trans-unit>
+<trans-unit id="s8de762fdac41eb23">
+  <source>Now Loading...</source>
+  <target>Cargando ahora...</target>
+</trans-unit>
+<trans-unit id="s4367989b562719e3">
+  <source>This page is under construction. Please check back later!</source>
+  <target>Esta página está en construcción. ¡Vuelve más tarde!</target>
+</trans-unit>
+<trans-unit id="s4e4d1d4e4ae00f4a">
+  <source>No user available</source>
+  <target>No hay usuario disponible</target>
+</trans-unit>
+<trans-unit id="s97e08d0c72a2ebc5">
+  <source>No email available</source>
+  <target>No hay correo electrónico disponible</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

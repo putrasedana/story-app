@@ -1,6 +1,9 @@
 import { html } from "lit";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
 import { msg, updateWhenLocaleChanges } from "@lit/localize";
+import Utils from "../utils/utils";
+import CheckUserAuth from "../pages/check-user-auth";
+import Config from "../config/config";
 
 class NavLinkAuth extends LitWithoutShadowDom {
   constructor() {
@@ -10,29 +13,24 @@ class NavLinkAuth extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <li class="nav-item dropdown">
+      <li class="nav-item">
         <a
-          class="nav-link dropdown-toggle text-nowrap"
+          class="nav-link fw-semibold fs-5"
+          id="userLogOut"
           href="#"
-          role="button"
-          data-bs-toggle="dropdown"
+          @click=${this._userLogOut}
         >
-          <div class="me-2 d-inline-block">
-            <img
-              id="imgUserLogged"
-              style="width: 30px;height: 30px"
-              class="img-fluid rounded-pill"
-              src="https://ui-avatars.com/api/?name=User%20Name&background=random"
-              alt="User Name"
-            />
-          </div>
-          <span id="nameUserLogged"></span>
+          <i class="bi bi-box-arrow-right ms-3 me-2"></i>
+          ${msg(`Logout`)}
         </a>
-        <ul class="dropdown-menu">
-          <a class="dropdown-item" id="userLogOut"> ${msg(`Keluar`)} </a>
-        </ul>
       </li>
     `;
+  }
+
+  _userLogOut(event) {
+    event.preventDefault();
+    Utils.destroyUserToken(Config.USER_TOKEN_KEY);
+    CheckUserAuth.checkLoginState();
   }
 }
 

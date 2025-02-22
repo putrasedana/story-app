@@ -1,5 +1,10 @@
+import Stories from "../network/stories";
+import { toggleLoading } from "../utils";
+import CheckUserAuth from "./check-user-auth";
+
 const Add = {
   async init() {
+    CheckUserAuth.checkLoginState();
     this._initialListener();
   },
 
@@ -14,37 +19,52 @@ const Add = {
         addStoryForm.classList.add("was-validated");
         this._sendPost();
       },
-      false
+      false,
     );
   },
 
-  _sendPost() {
+  async _sendPost() {
     const formData = this._getFormData();
 
-    if (this._validateFormData({ ...formData })) {
+    if (!this._validateFormData({ ...formData })) {
       console.log("formData");
       console.log(formData);
       this._goToDashboardPage();
     }
+
+    try {
+      toggleLoading(true);
+      await Stories.store({
+        description: formData.description,
+        photo: formData.photo,
+      });
+      this._goToDashboardPage();
+    } catch (error) {
+      console.error(error);
+      const errorMessage =
+        error.response?.data?.message ||
+        "Failed to add story. Please try again.";
+      window.alert(errorMessage);
+    } finally {
+      toggleLoading(false);
+    }
   },
 
   _getFormData() {
-    const nameInput = document.querySelector("#validationCustomRecordName");
-    const descriptionInput = document.querySelector("#validationCustomNotes");
-    const photoInput = document.querySelector("#validationCustomAmount");
-    const createdAtInput = document.querySelector("#validationCustomAmount");
+    const descriptionInput = document.querySelector(
+      "#validationCustomDescription",
+    );
+    const photoInput = document.querySelector("#validationCustomImage");
 
     return {
-      name: nameInput.value,
       description: descriptionInput.value,
       photo: photoInput.files[0],
-      createdAt: createdAtInput.value,
     };
   },
 
   _validateFormData(formData) {
     const formDataFiltered = Object.values(formData).filter(
-      (item) => item === ""
+      (item) => item === "",
     );
 
     return formDataFiltered.length === 0;
